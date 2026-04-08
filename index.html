@@ -3,108 +3,157 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Heritage Kitchen | Authentic Nigerian Fine Dining</title>
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" />
-        
+        <meta
+            name="description"
+            content="Experience the soul of West Africa. Heritage Kitchen serves premium Jollof, Pounded Yam, and authentic Pepper Soups in a modern setting."
+        />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khula:wght@400;700&family=Poppins:wght@300;400;600&display=swap" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+        
         <link rel="stylesheet" href="./css/tailwind-build.css" />
         <link rel="stylesheet" href="./css/index.css" />
     </head>
 
-    <body class="tw-bg-white tw-font-['Poppins']">
-        <header class="tw-fixed tw-top-0 tw-z-50 tw-w-full tw-transition-all tw-duration-500" id="main-header">
-            <div class="tw-container tw-mx-auto tw-flex tw-items-center tw-justify-between tw-py-4 tw-px-6">
-                <h1 class="tw-text-2xl tw-font-bold tw-text-white khula-font">HERITAGE</h1>
-                <nav class="max-md:tw-hidden tw-flex tw-gap-8 tw-text-white tw-font-medium">
-                    <a href="#about" class="hover:tw-text-primary">About</a>
-                    <a href="#menu" class="hover:tw-text-primary">Menu</a>
-                    <a href="#reservation" class="hover:tw-text-primary">Reservations</a>
-                    <a href="#" class="tw-bg-primary tw-px-5 tw-py-2 tw-rounded-full">Order Now</a>
+    <body class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-bg-white tw-font-['Poppins']">
+        
+        <header class="tw-fixed tw-top-0 tw-z-50 tw-w-full tw-transition-all tw-duration-500 tw-py-4" id="main-header">
+            <div class="tw-container tw-mx-auto tw-flex tw-items-center tw-justify-between tw-px-[5%]">
+                <div class="tw-flex tw-items-center">
+                    <h1 class="khula-font tw-text-3xl tw-font-bold tw-text-white tw-tracking-widest">HERITAGE</h1>
+                </div>
+
+                <nav class="max-md:tw-hidden tw-flex tw-gap-10 tw-text-white tw-font-medium">
+                    <a href="#about" class="hover:tw-text-primary tw-transition">About Us</a>
+                    <a href="#menu" class="hover:tw-text-primary tw-transition">Our Menu</a>
+                    <a href="#reservation" class="hover:tw-text-primary tw-transition">Reservations</a>
+                    <a href="#" class="tw-bg-primary tw-px-6 tw-py-2 tw-rounded-full hover:tw-bg-white hover:tw-text-black tw-transition">Order Online</a>
                 </nav>
-                <button class="bi bi-list tw-text-3xl tw-text-white md:tw-hidden" onclick="toggleHeader()"></button>
+
+                <button class="bi bi-list tw-text-4xl tw-text-white md:tw-hidden" onclick="toggleHeader()" id="collapse-btn"></button>
+            </div>
+            
+            <div class="collapsible-header tw-absolute tw-top-0 tw-right-0 tw-h-screen tw-bg-black/95 tw-transition-all tw-duration-300 tw-w-0 tw-overflow-hidden tw-flex tw-flex-col tw-pt-24 tw-px-10 md:tw-hidden" id="collapsed-items">
+                <a class="tw-text-white tw-text-2xl tw-mb-6" href="#about" onclick="toggleHeader()">About us</a>
+                <a class="tw-text-white tw-text-2xl tw-mb-6" href="#menu" onclick="toggleHeader()">Menus</a>
+                <a class="tw-text-white tw-text-2xl tw-mb-6" href="#reservation" onclick="toggleHeader()">Book Table</a>
+                <div class="tw-flex tw-gap-5 tw-text-3xl tw-mt-auto tw-mb-10 tw-text-white">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
             </div>
         </header>
 
-        <section class="tw-relative tw-h-screen tw-flex tw-items-center tw-justify-center tw-text-center tw-text-white">
-            <img src="https://images.unsplash.com/photo-1516685018646-5483c8448f48?q=80&w=1920" class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover" alt="Heritage Dining" />
+        <section class="tw-relative tw-h-screen tw-w-full tw-flex tw-items-center tw-justify-center tw-text-center tw-text-white" id="hero-section">
+            <img src="https://images.unsplash.com/photo-1516685018646-5483c8448f48?q=80&w=1920" alt="Restaurant Interior" class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover" />
             <div class="tw-absolute tw-inset-0 tw-bg-black/60"></div>
-            <div class="tw-relative tw-z-10 tw-px-4">
-                <h2 class="khula-font tw-text-6xl md:tw-text-8xl tw-font-bold tw-mb-4">Heritage Kitchen</h2>
-                <p class="tw-text-xl md:tw-text-2xl tw-font-light tw-max-w-2xl tw-mx-auto">Redefining Nigerian Gastronomy with Spices, Soul, and Tradition.</p>
-                <div class="tw-mt-10 tw-flex tw-gap-4 tw-justify-center">
-                    <a href="#menu" class="tw-bg-primary tw-px-8 tw-py-4 tw-rounded-full tw-font-bold hover:tw-scale-105 tw-transition">Explore Menu</a>
-                    <a href="#reservation" class="tw-bg-white tw-text-black tw-px-8 tw-py-4 tw-rounded-full tw-font-bold hover:tw-bg-gray-200 tw-transition">Book a Table</a>
+            <div class="tw-relative tw-z-10 tw-px-6 hero-text">
+                <h2 class="khula-font tw-text-6xl md:tw-text-8xl tw-font-bold tw-mb-6">Heritage Kitchen</h2>
+                <p class="tw-text-xl md:tw-text-2xl tw-font-light tw-max-w-2xl tw-mx-auto">Authentic Flavors, Timeless Traditions. Experience the True Taste of Nigeria.</p>
+                <div class="tw-mt-10 tw-flex tw-gap-5 tw-justify-center">
+                    <a href="#menu" class="tw-bg-primary tw-px-10 tw-py-4 tw-rounded-full tw-font-bold hover:tw-scale-105 tw-transition">Explore Menu</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="tw-py-20 tw-px-6 tw-container tw-mx-auto">
+        <section id="about" class="tw-py-24 tw-px-[5%] tw-container tw-mx-auto">
             <div class="tw-grid md:tw-grid-cols-2 tw-gap-16 tw-items-center">
                 <div class="tw-relative">
-                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=800" class="tw-rounded-2xl tw-shadow-2xl" alt="Authentic Cuisine" />
-                    <div class="tw-absolute -tw-bottom-6 -tw-right-6 tw-bg-primary tw-p-8 tw-rounded-xl tw-text-white max-md:tw-hidden">
-                        <p class="tw-text-4xl tw-font-bold">100%</p>
-                        <p class="tw-text-sm">Authentic Spices</p>
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?q=80&w=800" class="tw-rounded-3xl tw-shadow-2xl" alt="Authentic Nigerian Dish" />
+                    <div class="tw-absolute -tw-bottom-6 -tw-right-6 tw-bg-primary tw-p-10 tw-rounded-2xl tw-text-white max-md:tw-hidden">
+                        <p class="tw-text-4xl tw-font-bold">#1</p>
+                        <p class="tw-text-sm">Regional Pride</p>
                     </div>
                 </div>
                 <div>
                     <span class="tw-text-primary tw-font-bold tw-tracking-widest tw-uppercase">Our Story</span>
-                    <h3 class="tw-text-4xl tw-font-bold tw-mt-2 tw-mb-6 khula-font">The Soul of West Africa</h3>
-                    <p class="tw-text-gray-600 tw-leading-relaxed tw-mb-8">
-                        At Heritage Kitchen, we believe Jollof rice is more than a dish—it's a regional pride. From our smoky, party-style Jollof to our perfectly smooth Pounded Yam and rich Egusi, every meal is crafted to honor our heritage. 
+                    <h3 class="tw-text-5xl tw-font-bold tw-mt-4 tw-mb-8 khula-font">Celebrating West African Heritage</h3>
+                    <p class="tw-text-gray-600 tw-text-lg tw-leading-relaxed tw-mb-8">
+                        At Heritage Kitchen, we celebrate our culture through the art of cooking. From our regional pride—smoky, spiced Jollof rice—to our perfectly fluffy Pounded Yam served with nutty Egusi soup, every recipe is a journey back to our roots.
                     </p>
-                    <div class="tw-grid tw-grid-cols-2 tw-gap-4">
-                        <div class="tw-flex tw-items-center tw-gap-2">
-                            <i class="bi bi-check-circle-fill tw-text-primary"></i> <span>Fresh Fufu</span>
-                        </div>
-                        <div class="tw-flex tw-items-center tw-gap-2">
-                            <i class="bi bi-check-circle-fill tw-text-primary"></i> <span>Goat Pepper Soup</span>
-                        </div>
+                    <div class="tw-grid tw-grid-cols-2 tw-gap-6 tw-font-semibold">
+                        <div class="tw-flex tw-items-center tw-gap-3"><i class="bi bi-check-lg tw-text-primary"></i> Smoky Jollof</div>
+                        <div class="tw-flex tw-items-center tw-gap-3"><i class="bi bi-check-lg tw-text-primary"></i> Pounded Yam</div>
+                        <div class="tw-flex tw-items-center tw-gap-3"><i class="bi bi-check-lg tw-text-primary"></i> Goat Pepper Soup</div>
+                        <div class="tw-flex tw-items-center tw-gap-3"><i class="bi bi-check-lg tw-text-primary"></i> Fresh Akara</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="menu" class="tw-py-20 tw-bg-gray-50">
-            <div class="tw-container tw-mx-auto tw-px-6 tw-text-center">
-                <h3 class="tw-text-4xl tw-font-bold tw-mb-12 khula-font">Our Heritage Selection</h3>
-                <div class="tw-grid md:tw-grid-cols-3 tw-gap-8">
-                    <div class="tw-bg-white tw-rounded-3xl tw-overflow-hidden tw-shadow-lg hover:tw-shadow-2xl tw-transition">
-                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?q=80&w=800" class="tw-h-64 tw-w-full tw-object-cover" />
-                        <div class="tw-p-6">
-                            <h4 class="tw-text-xl tw-font-bold">Signature Jollof</h4>
-                            <p class="tw-text-gray-500 tw-text-sm tw-mt-2">Served with plantain and grilled chicken.</p>
+        <section id="menu" class="tw-py-24 tw-bg-gray-50">
+            <div class="tw-container tw-mx-auto tw-px-[5%] tw-text-center">
+                <h3 class="tw-text-5xl tw-font-bold tw-mb-16 khula-font">Signature Selection</h3>
+                <div class="tw-grid md:tw-grid-cols-3 tw-gap-10">
+                    
+                    <div class="tw-bg-white tw-rounded-[2.5rem] tw-overflow-hidden tw-shadow-xl hover:tw-shadow-2xl tw-transition-all tw-duration-500">
+                        <img src="https://images.unsplash.com/photo-1632731510206-8d776856003d?q=80&w=800" class="tw-h-72 tw-w-full tw-object-cover" alt="Jollof Rice" />
+                        <div class="tw-p-8">
+                            <h4 class="tw-text-2xl tw-font-bold">Party Jollof Rice</h4>
+                            <p class="tw-text-gray-500 tw-mt-3">The ultimate regional pride. Smoky, spiced, and served with dodo and chicken.</p>
                         </div>
                     </div>
-                    <div class="tw-bg-white tw-rounded-3xl tw-overflow-hidden tw-shadow-lg hover:tw-shadow-2xl tw-transition">
-                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800" class="tw-h-64 tw-w-full tw-object-cover" />
-                        <div class="tw-p-6">
-                            <h4 class="tw-text-xl tw-font-bold">Pounded Yam & Egusi</h4>
-                            <p class="tw-text-gray-500 tw-text-sm tw-mt-2">Traditional swallow with rich melon soup.</p>
+
+                    <div class="tw-bg-white tw-rounded-[2.5rem] tw-overflow-hidden tw-shadow-xl hover:tw-shadow-2xl tw-transition-all tw-duration-500">
+                        <img src="https://images.unsplash.com/photo-1650371428230-680f49896065?q=80&w=800" class="tw-h-72 tw-w-full tw-object-cover" alt="Egusi Soup" />
+                        <div class="tw-p-8">
+                            <h4 class="tw-text-2xl tw-font-bold">Egusi & Swallow</h4>
+                            <p class="tw-text-gray-500 tw-mt-3">Rich melon seed soup with assorted meats, paired with smooth Pounded Yam.</p>
                         </div>
                     </div>
-                    <div class="tw-bg-white tw-rounded-3xl tw-overflow-hidden tw-shadow-lg hover:tw-shadow-2xl tw-transition">
-                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=800" class="tw-h-64 tw-w-full tw-object-cover" />
-                        <div class="tw-p-6">
-                            <h4 class="tw-text-xl tw-font-bold">Heritage Suya</h4>
-                            <p class="tw-text-gray-500 tw-text-sm tw-mt-2">Spicy grilled beef skewers with yaji.</p>
+
+                    <div class="tw-bg-white tw-rounded-[2.5rem] tw-overflow-hidden tw-shadow-xl hover:tw-shadow-2xl tw-transition-all tw-duration-500">
+                        <img src="https://images.unsplash.com/photo-1628102422745-090264101e41?q=80&w=800" class="tw-h-72 tw-w-full tw-object-cover" alt="Beef Suya" />
+                        <div class="tw-p-8">
+                            <h4 class="tw-text-2xl tw-font-bold">Beef Suya Skewers</h4>
+                            <p class="tw-text-gray-500 tw-mt-3">Flame-grilled beef coated in authentic Yaji spice and served with onions.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <footer class="tw-bg-black tw-text-white tw-py-12 tw-text-center">
-            <h2 class="tw-text-2xl tw-font-bold tw-mb-4 khula-font">HERITAGE KITCHEN</h2>
-            <p class="tw-text-gray-400">124 Akoka Road, Yaba, Lagos, Nigeria</p>
-            <div class="tw-flex tw-justify-center tw-gap-6 tw-mt-8 tw-text-2xl">
+        <section id="reservation" class="tw-py-24 tw-px-[5%] tw-bg-black tw-text-white">
+            <div class="tw-container tw-mx-auto tw-grid md:tw-grid-cols-2 tw-gap-16 tw-items-center">
+                <div>
+                    <h3 class="tw-text-5xl tw-font-bold tw-mb-6 khula-font">Book Your Table</h3>
+                    <p class="tw-text-gray-400 tw-mb-10 tw-text-lg">Join us for an unforgettable dining experience. For parties larger than 10, please call us directly.</p>
+                    <div class="tw-flex tw-items-center tw-gap-4 tw-text-2xl tw-text-primary">
+                        <i class="bi bi-telephone"></i>
+                        <span class="tw-text-white">+234 812 345 6789</span>
+                    </div>
+                </div>
+                <form class="tw-bg-white tw-p-10 tw-rounded-3xl tw-text-black">
+                    <div class="tw-grid tw-gap-6">
+                        <input type="text" placeholder="Full Name" class="input tw-w-full" required />
+                        <input type="tel" placeholder="Phone Number" class="input tw-w-full" required />
+                        <div class="tw-grid tw-grid-cols-2 tw-gap-4">
+                            <input type="date" id="date" class="input" required />
+                            <select id="timings" class="input"></select>
+                        </div>
+                        <button type="submit" class="tw-bg-primary tw-text-white tw-py-4 tw-rounded-xl tw-font-bold hover:tw-bg-black tw-transition">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="tw-py-12 tw-bg-white tw-text-center tw-border-t">
+            <h2 class="khula-font tw-text-2xl tw-font-bold tw-mb-2">HERITAGE KITCHEN</h2>
+            <p class="tw-text-gray-500">124 Akoka Road, Yaba, Lagos</p>
+            <div class="tw-mt-8 tw-flex tw-justify-center tw-gap-8 tw-text-2xl">
                 <i class="bi bi-instagram hover:tw-text-primary tw-cursor-pointer"></i>
-                <i class="bi bi-facebook hover:tw-text-primary tw-cursor-pointer"></i>
                 <i class="bi bi-whatsapp hover:tw-text-primary tw-cursor-pointer"></i>
+                <i class="bi bi-twitter-x hover:tw-text-primary tw-cursor-pointer"></i>
             </div>
+            <p class="tw-mt-10 tw-text-xs tw-text-gray-400 uppercase tw-tracking-widest">© 2026 Tobiloba Portfolio Project</p>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="./scripts/utils.js"></script>
         <script src="./index.js"></script>
     </body>
 </html>
